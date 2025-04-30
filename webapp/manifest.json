@@ -83,7 +83,13 @@
 		"globalFilterEntityType": "",
 		"containerLayout": "resizable",
 		"enableLiveFilter": false,
-		"considerAnalyticalParameters": false,
+		"considerAnalyticalParameters": true,
+		"smartVariantRequired": true,
+		"showDateInRelativeFormat": false,
+		"imageSupported": true,
+		"refreshIntervalInMinutes": 2,
+		"useDateRangeType": true,
+		"enableLazyRendering": true,
 		"cards": {
 			"cardA": {
 				"model": "ZUI_KSSW_OVP_SERV",
@@ -102,7 +108,7 @@
 				"model": "ZUI_KSSW_OVP_SERV",
 				"template": "sap.ovp.cards.linklist",
 				"settings": {
-					"title": "Report Links",
+					"title": "{{card21_title}}",
 					"listFlavor": "standard",
 					"listtype": "condensed",
 					"defaultSpan": {
@@ -112,17 +118,31 @@
 					},
 					"staticContent": [
 						{
-							"title": "Inventory Reports",
+							"title": "{{card22_title}}",
 							"imageUri": "sap-icon://Fiori2/F0021",
-							"imageAltText": "Inventory Reports",
+							"imageAltText": "{{card22_title}}",
 							"semanticObject": "zmat_doc",
 							"action": "display"
 						},
 						{
-							"title": "On Hand Reports",
+							"title": "{{card23_title}}",
 							"imageUri": "sap-icon://Fiori2/F0194",
-							"imageAltText": "On Hand Reports",
+							"imageAltText": "{{card23_title}}",
 							"semanticObject": "Material",
+							"action": "display"
+						},
+						{
+							"title": "{{card24_title}}",
+							"imageUri": "sap-icon://shipping-status",
+							"imageAltText": "{{card24_title}}",
+							"semanticObject": "ZRT_EXPRCV_WHDC",
+							"action": "display"
+						},
+						{
+							"title": "{{card25_title}} ",
+							"imageUri": "sap-icon://supplier",
+							"imageAltText": "{{card251_title}}",
+							"semanticObject": "ZRTL_EXPRCV_SV",
 							"action": "display"
 						}
 					]
@@ -132,7 +152,7 @@
 				"model": "ZUI_KSSW_OVP_SERV",
 				"template": "sap.ovp.cards.linklist",
 				"settings": {
-					"title": "Quick Links",
+					"title": "{{card251_title}}",
 					"listFlavor": "standard",
 					"listtype": "condensed",
 					"defaultSpan": {
@@ -142,51 +162,51 @@
 					},
 					"staticContent": [
 						{
-							"title": "DC Receiving",
+							"title": "{{card26_title}}",
 							"imageUri": "sap-icon://Fiori8/F1248",
-							"imageAltText": "DC Receiving",
+							"imageAltText": "{{card26_title}}",
 							"semanticObject": "ZPROD_REC_CONS",
 							"action": "receive"
 						},
 						{
-							"title": "Transfer In",
+							"title": "{{card05_title}}",
 							"imageUri": "sap-icon://Fiori8/F1248",
 							"imageAltText": "Transfer In",
 							"semanticObject": "ZREC_PROD_EXT2",
 							"action": "receive"
 						},
 						{
-							"title": "Transfer Out",
+							"title": "{{card04_title}}",
 							"imageUri": "sap-icon://Fiori6/F0753",
-							"imageAltText": "Transfer Out",
+							"imageAltText": "{{card04_title}} ",
 							"semanticObject": "zprod_xfer2",
 							"action": "receive"
 						},
 						{
-							"title": "Adjustments",
+							"title": "{{card9_title}}",
 							"imageUri": "sap-icon://Fiori4/F0586",
-							"imageAltText": "Adjustments",
+							"imageAltText": "{{card9_title}}",
 							"semanticObject": "ZRT_ADJMASSSTK",
 							"action": "adjustmassstock"
 						},
 						{
-							"title": "Item Inquiry",
+							"title": "{{card27_title}}",
 							"imageUri": "sap-icon://Fiori3/F0535",
-							"imageAltText": "Item Inquiry",
+							"imageAltText": "{{card27_title}}",
 							"semanticObject": "Article",
 							"action": "lookup"
 						},
 						{
-							"title": "Reprint Documents",
+							"title": "{{card29_title}}",
 							"imageUri": "sap-icon://print",
-							"imageAltText": "Print Documents",
+							"imageAltText": "{{card29_title}}",
 							"semanticObject": "zpdftc52",
 							"action": "display"
 						},
 						{
-							"title": "My Store Assignment",
+							"title": "{{card20_title}} ",
 							"imageUri": "sap-icon://retail-store",
-							"imageAltText": "My Store Assignment",
+							"imageAltText": "{{card20_title}}",
 							"semanticObject": "Store",
 							"action": "assignUser"
 						}
@@ -247,11 +267,12 @@
 					"title": "{{card05_title}}",
 					"entitySet": "TodayTrnsfrIn",
 					"addODataSelect": false,
+					"showOnlyHeader": false,
 					"identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification",
 					"selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#TransferFilter",
 					"annotationPath": "com.sap.vocabularies.UI.v1.LineItem",
 					"defaultSpan": {
-						"rows": 5,
+						"rows": 2,
 						"cols": 2
 					}
 				}
@@ -287,7 +308,26 @@
 					"defaultSpan": {
 						"rows": 5,
 						"cols": 2
-					}
+					},
+					"bEnableStableColors": true,
+					"colorPalette": [
+						{
+							"dimensionValue": "0",
+							"color": "sapUiChartPaletteSemanticNeutral"
+						},
+						{
+							"dimensionValue": "1",
+							"color": "sapUiChartPaletteSemanticGood"
+						},
+						{
+							"dimensionValue": "2",
+							"color": "sapUiChartPaletteSemanticCritical"
+						},
+						{
+							"dimensionValue": "3",
+							"color": "sapUiChartPaletteSemanticBad"
+						}
+					]
 				}
 			},
 			"cardL": {
