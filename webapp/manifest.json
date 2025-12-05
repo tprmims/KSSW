@@ -87,7 +87,7 @@
 		"smartVariantRequired": true,
 		"showDateInRelativeFormat": false,
 		"imageSupported": true,
-		"refreshIntervalInMinutes": 2,
+		"refreshIntervalInMinutes": 0,
 		"useDateRangeType": true,
 		"enableLazyRendering": true,
 		"cards": {
@@ -272,7 +272,7 @@
 					"selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#TransferFilter",
 					"annotationPath": "com.sap.vocabularies.UI.v1.LineItem",
 					"defaultSpan": {
-						"rows": 2,
+						"rows": 4,
 						"cols": 2
 					}
 				}
