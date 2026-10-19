@@ -104,7 +104,7 @@
 					}
 				}
 			},
-			"cardK": {
+			"cardI": {
 				"model": "ZUI_KSSW_OVP_SERV",
 				"template": "sap.ovp.cards.linklist",
 				"settings": {
@@ -148,7 +148,7 @@
 					]
 				}
 			},
-			"cardD": {
+			"cardE": {
 				"model": "ZUI_KSSW_OVP_SERV",
 				"template": "sap.ovp.cards.linklist",
 				"settings": {
@@ -244,7 +244,7 @@
 					}
 				}
 			},
-			"cardE": {
+			"cardL": {
 				"model": "ZUI_KSSW_OVP_SERV",
 				"template": "sap.ovp.cards.table",
 				"settings": {
@@ -277,7 +277,7 @@
 					}
 				}
 			},
-			"cardP": {
+			"cardD": {
 				"model": "ZUI_KSSW_OVP_SERV",
 				"template": "sap.ovp.cards.table",
 				"settings": {
@@ -293,7 +293,7 @@
 					}
 				}
 			},
-			"cardG": {
+			"cardH": {
 				"model": "ZUI_KSSW_OVP_SERV",
 				"template": "sap.ovp.cards.list",
 				"settings": {
@@ -330,7 +330,7 @@
 					]
 				}
 			},
-			"cardL": {
+			"cardG": {
 				"model": "ZUI_KSSW_OVP_SERV",
 				"template": "sap.ovp.cards.table",
 				"settings": {
@@ -346,7 +346,7 @@
 					}
 				}
 			},
-			"cardQ": {
+			"cardK": {
 				"model": "ZUI_KSSW_OVP_SERV",
 				"template": "sap.ovp.cards.table",
 				"settings": {
@@ -362,7 +362,7 @@
 					}
 				}
 			},
-			"cardCA1": {
+			"cardJ": {
 				"model": "ZUI_KSSW_OVP_SERV",
 				"template": "sap.ovp.cards.table",
 				"settings": {

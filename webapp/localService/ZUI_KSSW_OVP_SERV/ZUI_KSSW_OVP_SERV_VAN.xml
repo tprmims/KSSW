@@ -54,11 +54,6 @@
 			<Annotations Target="cds_zui_kssw_ovp_serv.CtnPcgType/StatusText"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
 			<Annotations Target="cds_zui_kssw_ovp_serv.CtnPcgType/CurrentDate"><Annotation Term="UI.HiddenFilter"/></Annotations>
 			<Annotations Target="cds_zui_kssw_ovp_serv.CtnPcgType">
-				<Annotation Term="UI.HeaderFacets">
-					<Collection>
-						<Record Type="UI.ReferenceFacet"><PropertyValue Property="ID" String="HeaderGroup1-ID"/><PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#HeaderGroup1"/></Record>
-					</Collection>
-				</Annotation>
 				<Annotation Term="UI.Facets">
 					<Collection>
 						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Cartons Processing"/><PropertyValue Property="ID" String="Item"/>
@@ -70,6 +65,11 @@
 								</Annotation>
 							</PropertyValue>
 						</Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.HeaderFacets">
+					<Collection>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="ID" String="HeaderGroup1-ID"/><PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#HeaderGroup1"/></Record>
 					</Collection>
 				</Annotation>
 				<Annotation Term="UI.FieldGroup" Qualifier="HeaderGroup1">
@@ -159,7 +159,7 @@
 				</Annotation>
 				<Annotation Term="UI.LineItem">
 					<Collection>
-						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Supplier"/><PropertyValue Property="Value" Path="SupplierName"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="From"/><PropertyValue Property="Value" Path="SupplierName"/></Record>
 						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Expected"/><PropertyValue Property="Value" Path="expected"/></Record>
 						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Received"/><PropertyValue Property="Value" Path="received"/></Record>
 					</Collection>
@@ -248,7 +248,6 @@
 			</Annotations>
 			<Annotations Target="cds_zui_kssw_ovp_serv.TodayDcDelType/Outstanding"><Annotation Term="UI.Hidden"/></Annotations>
 			<Annotations Target="cds_zui_kssw_ovp_serv.TodayDcDelType/deliveryDiffDays"><Annotation Term="UI.Hidden"/></Annotations>
-			<Annotations Target="cds_zui_kssw_ovp_serv.TodayDcDelType/Supplier"><Annotation Term="UI.Hidden"/></Annotations>
 			<Annotations Target="cds_zui_kssw_ovp_serv.TodayDcDelType/ID"><Annotation Term="UI.Hidden"/></Annotations>
 			<Annotations Target="cds_zui_kssw_ovp_serv.TodayDcDelType">
 				<Annotation Term="UI.Identification">
@@ -265,7 +264,7 @@
 					</Collection>
 				</Annotation>
 				<Annotation Term="UI.SelectionVariant" Qualifier="TodaysDel">
-					<Record><PropertyValue Property="Text" String="Todays Deliveries"/>
+					<Record><PropertyValue Property="Text" String=""/>
 						<PropertyValue Property="SelectOptions">
 							<Collection>
 								<Record Type="UI.SelectOptionType"><PropertyValue Property="PropertyName" PropertyPath="deliveryDiffDays"/>
@@ -279,13 +278,19 @@
 						</PropertyValue>
 					</Record>
 				</Annotation>
-			</Annotations>
+			</Annotations><Annotations Target="cds_zui_kssw_ovp_serv.TodayTrnsfrInType/ProcessingStateText"/><Annotations Target="cds_zui_kssw_ovp_serv.TodayTrnsfrInType/NumberOfHandlingUnits"/>
 			<Annotations Target="cds_zui_kssw_ovp_serv.TodayTrnsfrInType/UnitOfMeasure"><Annotation Term="UI.Hidden"/></Annotations>
 			<Annotations Target="cds_zui_kssw_ovp_serv.TodayTrnsfrInType/ID"><Annotation Term="UI.Hidden"/></Annotations>
-			<Annotations Target="cds_zui_kssw_ovp_serv.TodayTrnsfrInType/ProcessingStateText">
-				<Annotation Term="Common.Text" Path="ProcessingStateText"><Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/></Annotation>
-			</Annotations><Annotations Target="cds_zui_kssw_ovp_serv.TodayTrnsfrInType/NumberOfHandlingUnits"/>
 			<Annotations Target="cds_zui_kssw_ovp_serv.TodayTrnsfrInType">
+				<Annotation Term="UI.DataPoint" Qualifier="ItemCount">
+					<Record><PropertyValue Property="Value" Path="ItemCount"/><PropertyValue Property="Title" String=""/><PropertyValue Property="Criticality" Path="StatusCriticality"/><PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithIcon"/></Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="NumberOfHandlingUnits">
+					<Record><PropertyValue Property="Value" Path="NumberOfHandlingUnits"/><PropertyValue Property="Title" String=""/><PropertyValue Property="Criticality" Path="StatusCriticality"/><PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithIcon"/></Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="ProcessingStateText">
+					<Record><PropertyValue Property="Value" Path="ProcessingStateText"/><PropertyValue Property="Title" String="Short Description"/><PropertyValue Property="Criticality" Path="StatusCriticality"/><PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithIcon"/></Record>
+				</Annotation>
 				<Annotation Term="UI.Identification">
 					<Collection>
 						<Record Type="UI.DataFieldForIntentBasedNavigation"><PropertyValue Property="SemanticObject" String="TRANSFERIN"/><PropertyValue Property="Action" String="display"/><PropertyValue Property="RequiresContext" Bool="true"/></Record>
@@ -293,9 +298,9 @@
 				</Annotation>
 				<Annotation Term="UI.LineItem">
 					<Collection>
-						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Status"/><PropertyValue Property="Value" Path="ProcessingStateText"/></Record>
-						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Trans"/><PropertyValue Property="Value" Path="NumberOfHandlingUnits"/></Record>
-						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Units"/><PropertyValue Property="Value" Path="ItemCount"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Status"/><PropertyValue Property="Criticality" Path="StatusCriticality"/><PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithIcon"/><PropertyValue Property="Value" Path="ProcessingStateText"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Trans"/><PropertyValue Property="Criticality" Path="StatusCriticality"/><PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithIcon"/><PropertyValue Property="Value" Path="NumberOfHandlingUnits"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Units"/><PropertyValue Property="Criticality" Path="StatusCriticality"/><PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithIcon"/><PropertyValue Property="Value" Path="ItemCount"/></Record>
 					</Collection>
 				</Annotation>
 				<Annotation Term="UI.SelectionVariant" Qualifier="TransferFilter">
@@ -315,11 +320,13 @@
 				</Annotation>
 			</Annotations>
 			<Annotations Target="cds_zui_kssw_ovp_serv.TransferOutType/DelStore"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="cds_zui_kssw_ovp_serv.TransferOutType/ALL_VAL"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="cds_zui_kssw_ovp_serv.TransferOutType/UnitOfMeasure"><Annotation Term="UI.Hidden"/></Annotations>
 			<Annotations Target="cds_zui_kssw_ovp_serv.TransferOutType/ID"><Annotation Term="UI.Hidden"/></Annotations>
 			<Annotations Target="cds_zui_kssw_ovp_serv.TransferOutType">
 				<Annotation Term="UI.Identification">
 					<Collection>
-						<Record Type="UI.DataFieldForIntentBasedNavigation"><PropertyValue Property="SemanticObject" String="ZRTL_TRS_OUTREP"/><PropertyValue Property="Action" String="display"/><PropertyValue Property="RequiresContext" Bool="true"/></Record>
+						<Record Type="UI.DataFieldForIntentBasedNavigation"><PropertyValue Property="SemanticObject" String="TrsfOut_KS"/><PropertyValue Property="Action" String="display"/><PropertyValue Property="RequiresContext" Bool="true"/></Record>
 					</Collection>
 				</Annotation>
 				<Annotation Term="UI.LineItem">
@@ -330,7 +337,19 @@
 					</Collection>
 				</Annotation>
 				<Annotation Term="UI.SelectionVariant" Qualifier="TrsfOut">
-					<Record><PropertyValue Property="Text" String="Transfer Out"/><PropertyValue Property="FilterExpression" String="Structure ZKSSW_TRSF_TDY does not have components UNITOFMEASURE"/></Record>
+					<Record><PropertyValue Property="Text" String="Transfer Out"/>
+						<PropertyValue Property="SelectOptions">
+							<Collection>
+								<Record Type="UI.SelectOptionType"><PropertyValue Property="PropertyName" PropertyPath="UnitOfMeasure"/>
+									<PropertyValue Property="Ranges">
+										<Collection>
+											<Record Type="UI.SelectionRangeType"><PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/><PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/><PropertyValue Property="Low" String="EA"/></Record>
+										</Collection>
+									</PropertyValue>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
 				</Annotation>
 			</Annotations>
 			<Annotations Target="cds_zui_kssw_ovp_serv.UpcmDelType/NumberOfHandlingUnits2"><Annotation Term="UI.HiddenFilter"/></Annotations>
@@ -375,7 +394,7 @@
 				<Annotation Term="UI.DataPoint" Qualifier="ItemCount1">
 					<Record><PropertyValue Property="Value" Path="ItemCount1"/><PropertyValue Property="Title" String=""/>
 						<PropertyValue Property="CriticalityCalculation">
-							<Record><PropertyValue Property="ImprovementDirection" EnumMember="UI.ImprovementDirectionType/Target"/><PropertyValue Property="DeviationRangeHighValue" Decimal="100"/><PropertyValue Property="ToleranceRangeLowValue" Decimal="0"/></Record>
+							<Record><PropertyValue Property="ImprovementDirection" EnumMember="UI.ImprovementDirectionType/Target"/></Record>
 						</PropertyValue>
 					</Record>
 				</Annotation>
