@@ -32,7 +32,8 @@
 		},
 		"sourceTemplate": {
 			"id": "OVP.cardtemplate",
-			"version": "0.0.0"
+			"version": "0.0.0",
+			"toolsId": "e87c340c-389b-40b6-89f3-f23f8ea1cff8"
 		}
 	},
 	"sap.ui": {
