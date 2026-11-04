@@ -219,10 +219,25 @@
 				"template": "sap.ovp.cards.table",
 				"settings": {
 					"title": "{{card02_title}}",
-					"entitySet": "TodayDcDel",
+					"entitySet": "tdyexpdcdel",
 					"addODataSelect": false,
 					"annotationPath": "com.sap.vocabularies.UI.v1.LineItem",
-					"selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#TodaysDel",
+					"selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#tdyexpdcdel",
+					"defaultSpan": {
+						"rows": 8,
+						"cols": 2
+					}
+				}
+			},
+			"cardB1": {
+				"model": "ZUI_KSSW_OVP_SERV",
+				"template": "sap.ovp.cards.table",
+				"settings": {
+					"title": "{{card02A_title}}",
+					"entitySet": "tdydcrecpt",
+					"addODataSelect": false,
+					"annotationPath": "com.sap.vocabularies.UI.v1.LineItem",
+					"selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#tdydcrecpt",
 					"defaultSpan": {
 						"rows": 8,
 						"cols": 2
