@@ -15,13 +15,13 @@ builder:
       configuration:
         ignoreCertErrors: true
         target:
-          url: https://vht1sde1ci.sap.tapestry.com:44340
-          client: '200'
+          url: https://launchpaddev1.tapestry.com:8240/
+          client: '110'
         app:
           name: ZKSSW_DASHBORD
           description: Dashboard
           package: ZFIORI
-          transport: DE1KXXXXX
+          transport: DE1K936084
         exclude:
           - /test/
           - /localService/

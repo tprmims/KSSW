@@ -5,6 +5,7 @@
 		"id": "RTL.ZKSSW_DASHBORD",
 		"type": "application",
 		"i18n": "i18n/i18n.properties",
+		
 		"applicationVersion": {
 			"version": "1.0.0"
 		},
