@@ -224,7 +224,7 @@
 					"annotationPath": "com.sap.vocabularies.UI.v1.LineItem",
 					"selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#tdyexpdcdel",
 					"defaultSpan": {
-						"rows": 8,
+						"rows": 2,
 						"cols": 2
 					}
 				}
@@ -239,7 +239,7 @@
 					"annotationPath": "com.sap.vocabularies.UI.v1.LineItem",
 					"selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#tdydcrecpt",
 					"defaultSpan": {
-						"rows": 8,
+						"rows": 2,
 						"cols": 2
 					}
 				}
@@ -255,7 +255,7 @@
 					"annotationPath": "com.sap.vocabularies.UI.v1.LineItem",
 					"selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#CartonProc",
 					"defaultSpan": {
-						"rows": 5,
+						"rows": 2,
 						"cols": 2
 					}
 				}
@@ -271,7 +271,7 @@
 					"annotationPath": "com.sap.vocabularies.UI.v1.LineItem",
 					"selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#NonInvDel",
 					"defaultSpan": {
-						"rows": 4,
+						"rows": 2,
 						"cols": 2
 					}
 				}
@@ -288,7 +288,7 @@
 					"selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#TransferFilter",
 					"annotationPath": "com.sap.vocabularies.UI.v1.LineItem",
 					"defaultSpan": {
-						"rows": 4,
+							"rows": 2,
 						"cols": 2
 					}
 				}
@@ -304,7 +304,7 @@
 					"selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#UpcmDel",
 					"annotationPath": "com.sap.vocabularies.UI.v1.LineItem",
 					"defaultSpan": {
-						"rows": 5,
+							"rows": 2,
 						"cols": 2
 					}
 				}
@@ -322,7 +322,7 @@
 					"selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#UpcmDelByDept",
 					"annotationPath": "com.sap.vocabularies.UI.v1.LineItem",
 					"defaultSpan": {
-						"rows": 5,
+						"rows": 2,
 						"cols": 2
 					},
 					"bEnableStableColors": true,
@@ -357,7 +357,7 @@
 					"selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#AdjNormal",
 					"annotationPath": "com.sap.vocabularies.UI.v1.LineItem",
 					"defaultSpan": {
-						"rows": 5,
+							"rows": 2,
 						"cols": 2
 					}
 				}
@@ -373,7 +373,7 @@
 					"selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#OverdueDelTPDays",
 					"annotationPath": "com.sap.vocabularies.UI.v1.LineItem",
 					"defaultSpan": {
-						"rows": 5,
+							"rows": 2,
 						"cols": 2
 					}
 				}
@@ -389,7 +389,7 @@
 					"selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#TrsfOut",
 					"annotationPath": "com.sap.vocabularies.UI.v1.LineItem",
 					"defaultSpan": {
-						"rows": 4,
+						"rows": 2,
 						"cols": 2
 					}
 				}
